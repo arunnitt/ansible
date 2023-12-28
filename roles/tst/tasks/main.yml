@@ -1,0 +1,18 @@
+---
+  - name: update packages
+    command: sudo apt update -y
+    when: ansible_facts['os_family'] == 'Debian'
+
+  - name: upgrade packages
+    command: sudo apt upgrade -y
+    when: ansible_facts['os_family'] == 'Debian'
+
+  - name: install vim
+    command: sudo apt install -y vim
+    when: ansible_facts['os_family'] == 'Debian'
+ 
+  - name: docker
+    command: sudo docker ps
+    when: ansible_facts['os_family'] == 'Debian'
+
+#when: inventory_hostname in groups['tst']

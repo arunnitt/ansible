@@ -1,0 +1,4 @@
+- name: update
+  hosts: tst-env
+  roles:
+    - tst
